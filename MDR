@@ -1,0 +1,11 @@
+
+from math import prod as p
+def MDR(n, persistence=0):
+    if n < 10:
+        return (n, persistence)
+    dig = p([int(i) for i in str(n)])
+    return MDR(dig, persistence+1)
+
+
+print(MDR(int(input("Enter a number: "))))
+
