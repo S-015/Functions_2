@@ -1,0 +1,14 @@
+def properFactors(n):
+    s = 0
+    for i in range(1, (n // 2) + 1):
+        if n % i == 0:
+            s += i
+    return s
+
+def Amicable(a, b):
+    if b == properFactors(a) and a == properFactors(b):
+        print(f"{a} and {b} are amicable.")
+    else:
+        print(f"{a} and {b} are not amicable.")
+
+Amicable(int(input("Enter 2 numbers: ")), int(input()))
